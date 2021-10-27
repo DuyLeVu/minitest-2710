@@ -42,8 +42,8 @@ public class Student extends Person {
     }
 
     @Override
-    public int calAverageScore() {
-        return 0;
+    public double calAverageScore() {
+        return (this.mathScore + this.chemistryScore + this.physicalScore)/3;
     }
 
     public void setPhysicalScore(double physicalScore) {

@@ -62,5 +62,5 @@ public abstract class Person {
 
     public abstract double getPhysicalScore();
 
-    public abstract int calAverageScore();
+    public abstract double calAverageScore();
 }

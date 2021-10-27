@@ -61,7 +61,7 @@ public class PersonManagerImpl implements GeneralManagerService<Person> {
         if (index != -1)
             System.out.println(listPerson.get(index));
         else {
-            System.out.println(index + " không có trong danh sách");
+            System.out.println("Id không có trong danh sách");
         }
     }
 

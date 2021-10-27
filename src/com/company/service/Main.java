@@ -8,9 +8,11 @@ import com.company.service.impl.StudentManagerImpl;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) {Scanner sc = new Scanner(System.in);
        StudentManagerImpl personManager = new StudentManagerImpl();
+       personManager.add(new Student("1",1,1,1,1));
+        personManager.add(new Student("2",2,2,2,2));
+        personManager.add(new Student("3",3,0,0,0));
         while (true) {
             displayMenuStudent();
             System.out.println("Nhập lựa chọn:");
@@ -26,7 +28,7 @@ public class Main {
                     personManager.delete(idNeedToDelete);
                     break;
                 case 3:
-                   personManager.printStudent();
+                   personManager.print();
                     break;
                 case 4:
                     int idNeedToFind;
@@ -80,6 +82,4 @@ public class Main {
         Student student = new Student(name, age, mathScore, chemistryScore, physicalScore);
         return student;
     }
-
-
 }
