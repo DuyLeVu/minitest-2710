@@ -27,8 +27,9 @@ public class StudentManagerImpl extends PersonManagerImpl {
 
     @Override
     public void print() {
-        listStudent.sort(Comparator.comparingDouble(Person::calAverageScore));
         super.print();
+//        listStudent.sort(Comparator.comparingDouble(Person::calAverageScore));
+//        super.print();
     }
 
     //    @Override

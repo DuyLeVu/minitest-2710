@@ -50,9 +50,14 @@ public class PersonManagerImpl implements GeneralManagerService<Person> {
 
     @Override
     public void print() {
+        printFullLine();
+        System.out.printf("|%-12s|%-12s|%-12s|%-20s|%-20s|%-20s","Id","Name","Age","Math Score","Chemistry Score","Physical Score");
+        System.out.println();
+        printFullLine();
         for (int i=0; i<listPerson.size(); i++){
             System.out.println(listPerson.get(i));
         }
+        System.out.println();
     }
 
     @Override
@@ -70,5 +75,25 @@ public class PersonManagerImpl implements GeneralManagerService<Person> {
     }
 
     public void maxAverageScore() {
+    }
+
+    public static void printLine(int space) {
+        for (int i = 0; i <= space; i++) {
+            if (i == space) {
+                System.out.print("+");
+            } else {
+                System.out.print("-");
+            }
+        }
+    }
+    public static void printFullLine() {
+        System.out.print("+");
+        printLine(12);
+        printLine(12);
+        printLine(12);
+        printLine(20);
+        printLine(20);
+        printLine(20);
+        System.out.println();
     }
 }

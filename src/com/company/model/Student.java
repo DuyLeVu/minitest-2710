@@ -52,13 +52,6 @@ public class Student extends Person {
 
     @Override
     public String toString() {
-        return "Student{" +
-                "Id=" + getId() +
-                ", Name=" + getName() +
-                ", Age=" + getAge() +
-                ", mathScore=" + mathScore +
-                ", chemistryScore=" + chemistryScore +
-                ", physicalScore=" + physicalScore +
-                '}';
+        return String.format("|%-12d|%-12s|%-12d|%-20f|%-20f|%-20f",getId(), getName(),getAge(), this.mathScore,this.chemistryScore,this.physicalScore);
     }
 }
