@@ -12,6 +12,15 @@ public class Student extends Person {
         this.physicalScore = physicalScore;
     }
 
+    public Student(int id, String name, int age, double mathScore, double chemistryScore, double physicalScore) {
+        super(name, age);
+        this.mathScore = mathScore;
+        this.chemistryScore = chemistryScore;
+        this.physicalScore = physicalScore;
+    }
+
+
+
     public Student(double mathScore, double chemistryScore, double physicalScore) {
         this.mathScore = mathScore;
         this.chemistryScore = chemistryScore;

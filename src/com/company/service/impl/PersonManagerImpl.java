@@ -4,16 +4,24 @@ import com.company.model.Person;
 import com.company.service.GeneralManagerService;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class PersonManagerImpl implements GeneralManagerService<Person> {
-    private ArrayList<Person> listPerson;
+    private List<Person> listPerson;
 
-    public PersonManagerImpl() {
-        this.listPerson = new ArrayList<>();
+    public PersonManagerImpl(List<Person> listPerson) {
+        this.listPerson = listPerson;
     }
 
-    public ArrayList<Person> getListPerson() {
+    public PersonManagerImpl() {
+    }
+
+    public List<Person> getListPerson() {
         return listPerson;
+    }
+
+    public void setListPerson(List<Person> listPerson) {
+        this.listPerson = listPerson;
     }
 
     @Override

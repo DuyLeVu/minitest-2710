@@ -5,12 +5,23 @@ import com.company.model.Student;
 
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.List;
 
 public class StudentManagerImpl extends PersonManagerImpl {
-    private ArrayList<Person> listStudent;
+    private List<Student> listStudent;
 
-    public StudentManagerImpl() {
-        listStudent = getListPerson();
+
+    public StudentManagerImpl(List<Student> listStudent) {
+        super();
+        this.listStudent = listStudent;
+    }
+
+    public void setListStudent(List<Student> listStudent) {
+        this.listStudent = listStudent;
+    }
+
+    public List<Student> getListStudent() {
+        return listStudent;
     }
 
     public void maxAverageScore() {
@@ -27,7 +38,14 @@ public class StudentManagerImpl extends PersonManagerImpl {
 
     @Override
     public void print() {
-        super.print();
+        printFullLine();
+        System.out.printf("|%-12s|%-12s|%-12s|%-20s|%-20s|%-20s","Id","Name","Age","Math Score","Chemistry Score","Physical Score");
+        System.out.println();
+        printFullLine();
+        for (int i=0; i<listStudent.size(); i++){
+            System.out.println(listStudent.get(i));
+        }
+        System.out.println();
 //        listStudent.sort(Comparator.comparingDouble(Person::calAverageScore));
 //        super.print();
     }
